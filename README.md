@@ -1,10 +1,4 @@
-                          ██████╗ ██████╗ ██████╗ ███████╗
-                          ██╔══██╗██╔═══██╗██╔══██╗██╔════╝
-                          ██████╔╝██║   ██║██████╔╝█████╗  
-                          ██╔═══╝ ██║   ██║██╔═══╝ ██╔══╝  
-                          ██║     ╚██████╔╝██║     ███████╗
-                          ╚═╝      ╚═════╝ ╚═╝     ╚══════╝
-                          
+# PDPE (PHP Docker Portable Environment)
 
 [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)](https://www.docker.com/)
 [![Docker Image](https://img.shields.io/docker/pulls/jmeiracorbal/pdpe.svg)](https://hub.docker.com/r/jmeiracorbal/pdpe)
@@ -15,7 +9,7 @@
 [![Build and Publish](https://github.com/jmeiracorbal/pdpe/actions/workflows/publish-docker-image.yml/badge.svg)](https://github.com/jmeiracorbal/pdpe/actions/workflows/publish-docker-image.yml)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-PDPE (PHP Docker Portable Environment) is as a starter kit to work in PHP application environment in Apache, created to allow multiple application to run in a single container.
+ This project is as a starter kit to work in PHP application environment in Apache, created to allow multiple application to run in a single container.
 
 > The PHP version supported for this project is stablished on php 8.3.
 
@@ -110,7 +104,7 @@ _Note_: On the development mode, you must be sure that your htdocs contains a va
 - `stacks/development`: contains ready-to-use override files for development (mysql, mongo, etc.).
 - `stacks/production`: intentionally left empty. You can define your own stack here, designed to run prebuilt apps (deployed elsewhere) and mind to use a reverse proxy configuration.
 
-## Development environment
+## Development profile
 
 - Deploys bind mounts for htdocs. Your applications live here on development.
 - Has debugging capabilities like Xdebug.
@@ -151,11 +145,10 @@ _Note_: If your IDE requires that there is a `devcontainer.json` file in the roo
 ln -sf .devcontainer/devcontainer.mysql.json .devcontainer/devcontainer.json
 ```
 
-### Production profile
+## Production profile
 
 - Explicit `-profile` flag too, in this case with `prod` as value.
-- Shouldn't exist volumes to the `htdocs` folder because you should to use your own compose files for your applications.
-- It works well with production-ready containers or CI/CD pipelines.
+- You shouldn't have any project and volume to `htdocs` because the main idea is to use your own compose files for your applications when you use this project for production environment.
 
 ```bash
 docker compose --profile prod up
