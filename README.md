@@ -6,7 +6,7 @@
 [![DevContainer](https://img.shields.io/badge/DevContainer-supported-2ea44f?logo=visualstudiocode)](https://containers.dev/)
 ![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)
 ![Status](https://img.shields.io/badge/status-active-success)
-[![Build and Publish](https://github.com/jmeiracorbal/pdpe/actions/workflows/publish-docker-image.yml/badge.svg)](https://github.com/jmeiracorbal/pdpe/actions/workflows/publish-docker-image.yml)
+[![Build and Publish](https://github.com/jmeiracorbal/pdpe/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/jmeiracorbal/pdpe/actions/workflows/build-and-publish.yml)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
  This project is as a starter kit to work in PHP application environment in Apache, created to allow multiple application to run in a single container.

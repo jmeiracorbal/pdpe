@@ -37,6 +37,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set commit SHA tag
+        run: echo "SHORT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+  
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -48,6 +51,10 @@ jobs:
 
       - name: Build and push base image
         run: |
-          docker build -f etc/docker/apache2/Dockerfile --target base -t jmeiracorbal/pdpe:latest .
+          docker build -f etc/docker/apache2/Dockerfile --target base \
+            -t jmeiracorbal/pdpe:latest \
+            -t jmeiracorbal/pdpe:${SHORT_SHA} .
+
           docker push jmeiracorbal/pdpe:latest
+          docker push jmeiracorbal/pdpe:${SHORT_SHA}
           
