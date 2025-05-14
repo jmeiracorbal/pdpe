@@ -1,0 +1,37 @@
+name: Bug report
+description: Report an issue or unexpected behavior in the PDPE environment
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide as much context as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Describe the issue you are facing
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Stack/environment used
+      placeholder: development, production, custom...
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: Provide step-by-step instructions
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or output
+      placeholder: Paste console or Docker logs

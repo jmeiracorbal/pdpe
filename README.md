@@ -399,7 +399,7 @@ Improvements are welcome, but this is a personal project designed to assist my o
 
 Issues might exist and will be handled as time permits, but one should not expect any fixes or changes as certain. 
 
-If you found a bug or have any suggestion, please create an [issue](https://github.com/jmeiracorbal/pdpe-php-docker-portable-environment/issues) in line with the [code of conduct](./CODE_OF_CONDUCT.md) and [Contributing guide](./CONTRIBUTING.md) of the project.
+If you found a bug or have any suggestion, please create an [issue](https://github.com/jmeiracorbal/pdpe/issues) in line with the [code of conduct](./CODE_OF_CONDUCT.md) and [Contributing guide](./CONTRIBUTING.md) of the project.
 
 # License
 
